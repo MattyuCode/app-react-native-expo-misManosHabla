@@ -8,6 +8,8 @@ export default function ModalColores({ route }) {
   const navigation = useNavigation();
   const { colorsSelected } = route.params;
 
+
+  
   const AllColores = {
     AMARILLO: {
       uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Amarillo.jpg?raw=true",
