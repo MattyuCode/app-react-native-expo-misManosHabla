@@ -5,6 +5,8 @@ import { useNavigation } from "@react-navigation/native";
 export default function Modal({ route }) {
   const navigation = useNavigation();
 
+
+ // hola
   const { daySelected } = route.params;
 
   const AllDays = {
