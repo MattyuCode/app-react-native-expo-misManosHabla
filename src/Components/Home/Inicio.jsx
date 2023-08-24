@@ -16,7 +16,7 @@ export default function Inicio() {
     { id: "1", title: "ALFABETOS", name: "Alfabetos" },
     { id: "2", title: "NÚMEROS", name: "Numeros" },
     { id: "3", title: "COLORES", name: "Colores" },
-    { id: "4", title: "FAMILIA", name: "Familia" },
+    { id: "4", title: "EMOCIONES", name: "Emociones" },
     { id: "5", title: "DÍAS DE LA SEMANA", name: "DiasSemana" },
   ];
 
