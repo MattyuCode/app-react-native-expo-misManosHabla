@@ -1,7 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import AntDesign from "react-native-vector-icons/AntDesign";
 
-export default function ModalNumeros() {
+//COMMENT: SE AGREGA UN PARAMETRO ROUTE PARA RECIBIR EL VALOR SELECCIONADO DESDE NUMEROS
+export default function ModalNumeros({ route }) {
+  const navigation = useNavigation();
+  const { numerosSeleccionados } = route.params;
+
   const AllNumeros = {
     UNO: {
       uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Uno.jpg?raw=true",
@@ -35,11 +41,56 @@ export default function ModalNumeros() {
     },
   };
 
+  //BUG: Se crea una variable por donde se llama el objeto de los valores correspondientes pasando el valor seleccionado
+  const numeros = AllNumeros[numerosSeleccionados];
+
   return (
-    <View>
-      <Text>ModalNumeros</Text>
+    <View style={styles.container}>
+      <Text style={styles.encabezado}>{numerosSeleccionados}</Text>
+
+      <Image source={numeros} style={styles.image} resizeMode="contain" />
+      <TouchableOpacity
+        style={styles.touchableOpacity}
+        onPress={() => navigation.navigate("Numeros")}
+      >
+        <AntDesign name="caretleft" size={20} color="white" />
+        <Text style={styles.botonText}>Regresar</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+  },
+  encabezado: {
+    fontWeight: 600,
+    fontSize: 40,
+    color: "#05633E",
+    marginTop: 10,
+    marginBottom: 40,
+  },
+  image: {
+    width: "100%",
+    height: undefined,
+    aspectRatio: 1,
+    borderRadius: 1,
+    marginBottom: 50,
+  },
+  botonText: {
+    color: "white",
+    fontSize: 16,
+  },
+  touchableOpacity: {
+    backgroundColor: "red",
+    padding: 15,
+    borderRadius: 5,
+    width: "50%",
+    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    margin: 15,
+  },
+});

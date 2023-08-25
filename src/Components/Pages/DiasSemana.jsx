@@ -13,7 +13,7 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 export default function Inicio() {
   const navigation = useNavigation();
   const [searchText, setSearchText] = useState("");
-
+ 
   const diasSemana = [
     { id: "1", title: "LUNES" },
     { id: "2", title: "MARTES" },

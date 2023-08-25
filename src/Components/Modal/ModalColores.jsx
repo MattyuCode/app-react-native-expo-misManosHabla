@@ -89,7 +89,6 @@ const styles = StyleSheet.create({
   //MAT: PARA VISUALIZAR EL IMAGEN EL LOS MODALES
   imagen: {
     width: "100%",
-    width: "100%",
     height: undefined, // Esto permite ajustar la altura de acuerdo a la relación de aspecto original
     aspectRatio: 1, // Relación de aspecto 1:1
     borderRadius: 1,

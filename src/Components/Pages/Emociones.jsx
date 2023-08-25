@@ -1,23 +1,26 @@
-import { FlatList, StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  TouchableOpacity,
+} from "react-native";
+import AntDesign from "react-native-vector-icons/AntDesign";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import AntDesign from "react-native-vector-icons/AntDesign";
 
-export default function Numeros() {
+export default function Emociones() {
   const navigation = useNavigation();
   const [buscarTexto, setBuscarTexto] = useState("");
 
-  const numeros = [
-    { id: 1, title: "UNO", number: 1 },
-    { id: 2, title: "DOS", number: 2 },
-    { id: 3, title: "TRES", number: 3 },
-    { id: 4, title: "CUATRO", number: 4 },
-    { id: 5, title: "CINCO", number: 5 },
-    { id: 6, title: "SEIS", number: 6 },
-    { id: 7, title: "SIETE", number: 7 },
-    { id: 8, title: "OCHO", number: 8 },
-    { id: 9, title: "NUEVE", number: 9 },
-    { id: 10, title: "DIEZ", number: 10 },
+  const emociones = [
+    { id: 1, title: "AMOR" },
+    { id: 2, title: "ENFADADO" },
+    { id: 3, title: "FELIZ" },
+    { id: 4, title: "MIEDO" },
+    { id: 5, title: "PACIENTE" },
+    { id: 6, title: "TRISTE" },
   ];
 
   const renderData = ({ item }) => {
@@ -33,9 +36,9 @@ export default function Numeros() {
       <TouchableOpacity
         style={styles.boton}
         onPress={() =>
-          navigation.navigate("VistaNumeros", {
+          navigation.navigate("VistaEmocion", {
             // FIXME: ESTO ES LO QUE SE MANDA EL EL ROUTE DESDE EL MODALS
-            numerosSeleccionados: item.title,
+            emocionSeleccionado: item.title,
           })
         }
       >
@@ -47,16 +50,16 @@ export default function Numeros() {
   //BUG: PARA MOSTRAR TODOS LOS BOTONES CREADOS EN LA FUNCION DE RENDERDATA
   return (
     <View style={styles.container}>
-      <Text style={styles.TextoEncabezado}>LOS NÚMEROS</Text>
+      <Text style={styles.TextoEncabezado}>LAS EMOCIONES</Text>
       <TextInput
         style={styles.inputBuscar}
-        placeholder="Buscar números..."
+        placeholder="Buscar emoción..."
         value={buscarTexto}
         onChangeText={(text) => setBuscarTexto(text)}
       />
 
       <FlatList
-        data={numeros}
+        data={emociones}
         numColumns={3}
         renderItem={renderData}
         keyExtractor={(item) => item.id}
@@ -80,7 +83,7 @@ const styles = StyleSheet.create({
   },
   boton: {
     width: "30%",
-    backgroundColor: "#02d2ed",
+    backgroundColor: "#8f0000",
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
@@ -97,7 +100,7 @@ const styles = StyleSheet.create({
     color: "#ffff",
     textAlign: "center",
     marginBottom: 30,
-    backgroundColor: "#4af740",
+    backgroundColor: "#becc00",
     fontSize: 30,
     fontWeight: 700,
     borderRadius: 15,
