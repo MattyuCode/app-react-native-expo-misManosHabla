@@ -26,7 +26,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
       {/* NOTE: TODAS LAS VISTAS */}
-
+{/* New */}
         <Stack.Screen name="HOME" component={Home} />
         <Stack.Screen name="INICIO" component={Inicio} />
         <Stack.Screen name="Numeros" component={Numeros} />
