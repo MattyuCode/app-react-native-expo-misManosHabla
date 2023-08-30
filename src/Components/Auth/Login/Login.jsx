@@ -21,10 +21,10 @@ export default function Login() {
   useEffect(() => {
     navigation.setOptions({
       headerShown: false,
-    }); 
+    });
   }, []);
 
-  
+
 
   const handleRegisterButtonClick = () => {
     navigation.navigate("signUp");
@@ -70,7 +70,7 @@ export default function Login() {
             login(username, password);
           }}
           style={[
-            tw`absolute bottom-50 w-52 bg-white p-5 rounded-2xl `,
+            tw`bottom-0 w-52 bg-white p-5 rounded-2xl `,
             { margnHorizontal: "25%" },
           ]}
         >
@@ -79,15 +79,15 @@ export default function Login() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={handleRegisterButtonClick} // Agrega una nueva función para el botón de registro
           style={[
-            tw`absolute bottom-25 w-52 bg-white p-5 rounded-2xl`,
-            // { marginLeft: "25%" },
+            tw`bottom-15 w-52 bg-white p-5 rounded-2xl`,
+            { marginLeft: "25%" },
           ]}
         >
           <Text style={tw`font-semibold text-center text-xl`}>Registrarse</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </ImageBackground>
     </View>
   );

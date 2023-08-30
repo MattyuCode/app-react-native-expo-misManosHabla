@@ -94,3 +94,6 @@ const styles = StyleSheet.create({
     margin: 15,
   },
 });
+
+
+//NOTE: SIN CAMBIOS AQUI EN MODAL NUMEROS

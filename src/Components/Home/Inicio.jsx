@@ -56,15 +56,16 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   boton: {
-    flex: 1,
+    // flex: 1,
     // height: 70,
+    width: "auto",
     backgroundColor: "#4a98f7",
     justifyContent: "center",
     alignItems: "center",
     marginVertical: 8,
     borderRadius: 5,
     padding: 15,
-    marginHorizontal: 4,
+    marginHorizontal: 6,
     textAlign: "center",
   },
   icono: {

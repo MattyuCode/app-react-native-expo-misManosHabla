@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     backgroundColor: "#becc00",
     fontSize: 30,
-    fontWeight: 700,
+    // fontWeight: 700,
     borderRadius: 15,
     padding: 25,
   },
