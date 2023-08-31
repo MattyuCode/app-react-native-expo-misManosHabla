@@ -14,7 +14,6 @@ import { AuthContext } from "../../Context/AuthContext";
 
 export default function Login() {
   const navigation = useNavigation();
-  const [user, setUser] = useState([]);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useContext(AuthContext);
@@ -22,34 +21,10 @@ export default function Login() {
   useEffect(() => {
     navigation.setOptions({
       headerShown: false,
-    });
-
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await fetch(
-    //       "https://api-clchuj.onrender.com/api/users"
-    //     );
-    //     const data = await response.json();
-    //     // console.log(data.users);
-    //     setUser(data.users);
-    //   } catch (error) {
-    //     console.error(error.message);
-    //   }
-    // };
-    // fetchData();
+    }); 
   }, []);
 
-  // const handleButtonClick = () => {
-  //   if (
-  //     user.find((item) => item.user === username && item.password === password)
-  //   ) {
-  //     console.log("Si es correcto");
-  //     navigation.navigate("home");
-  //   } else {
-  //     alert("😮  DATOS INCORRECTOS 😪😪");
-  //     console.log("no es correcto");
-  //   }
-  // };
+  
 
   const handleRegisterButtonClick = () => {
     navigation.navigate("signUp");
