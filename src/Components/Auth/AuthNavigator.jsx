@@ -1,4 +1,4 @@
-import { View, Text , ActivityIndicator} from "react-native";
+import { View, Text, ActivityIndicator } from "react-native";
 import React, { useContext, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 
@@ -23,13 +23,13 @@ import { AuthContext } from "../Context/AuthContext";
 
 const AuthNavigator = () => {
   const Stack = createStackNavigator();
-  const [isAthenticated, setIsAuthenticated] = useState(false);
-
   const { isLoading, isToken } = useContext(AuthContext);
 
   if (isLoading) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignContent: "center" }} >
+      <View
+        style={{ flex: 1, justifyContent: "center", alignContent: "center" }}
+      >
         <ActivityIndicator size={"large"} />
       </View>
     );
