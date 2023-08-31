@@ -8,6 +8,7 @@ import {
 import AntDesign from "react-native-vector-icons/AntDesign";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
+import tw from 'twrnc';
 
 export default function Inicio() {
   const navigation = useNavigation();
@@ -36,7 +37,7 @@ export default function Inicio() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.T3xto}>VOCABULARIOS A APRENDER</Text>
+      <Text style={styles.T3xto}>APRENDIENDO LENGUAJE DE SEÑAS</Text>
       <FlatList
         data={data}
         numColumns={3}

@@ -1,0 +1,119 @@
+import {
+  Text,
+  View,
+  Image,
+  ImageBackground,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
+import React, { useContext, useEffect, useLayoutEffect, useState } from "react";
+import tw from "twrnc";
+import { useNavigation } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
+import { AuthContext } from "../../Context/AuthContext";
+
+export default function Login() {
+  const navigation = useNavigation();
+  const [user, setUser] = useState([]);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = useContext(AuthContext);
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await fetch(
+    //       "https://api-clchuj.onrender.com/api/users"
+    //     );
+    //     const data = await response.json();
+    //     // console.log(data.users);
+    //     setUser(data.users);
+    //   } catch (error) {
+    //     console.error(error.message);
+    //   }
+    // };
+    // fetchData();
+  }, []);
+
+  // const handleButtonClick = () => {
+  //   if (
+  //     user.find((item) => item.user === username && item.password === password)
+  //   ) {
+  //     console.log("Si es correcto");
+  //     navigation.navigate("home");
+  //   } else {
+  //     alert("😮  DATOS INCORRECTOS 😪😪");
+  //     console.log("no es correcto");
+  //   }
+  // };
+
+  const handleRegisterButtonClick = () => {
+    navigation.navigate("signUp");
+  };
+
+  return (
+    <View style={tw`flex-1 bg-slate-700`}>
+      <ImageBackground
+        resizeMode="cover"
+        style={[tw`flex-1 items-center  `, { paddingTop: 100 }]}
+        source={require("../../../../assets/gradient1.png")}
+      >
+        <View style={tw`  `}>
+          <Image
+            style={[
+              // tw`w-70 h-70  border-4 border-green-500`,
+              tw`w-70 h-70  border-4 border-indigo-500/100`,
+              { borderRadius: 150 },
+            ]}
+            source={require("../../../../assets/AI_Generated_Image.jpg")}
+          />
+        </View>
+
+        <TextInput
+          style={[tw`w-80 bg-white p-5 rounded-xl mb-5 mt-5`, { fontSize: 17 }]}
+          placeholder="Nombre de usuario"
+          value={username}
+          onChangeText={(value) => setUsername(value)}
+        />
+
+        <TextInput
+          style={[tw`w-80 bg-white p-5 rounded-xl mb-5`, { fontSize: 17 }]}
+          placeholder="Contraseña"
+          // keyboardType="phone-pad"
+          secureTextEntry={true}
+          value={password}
+          onChangeText={(value) => setPassword(value)}
+        />
+
+        <TouchableOpacity
+          // onPress={handleButtonClick}
+          onPress={() => {
+            login(username, password);
+          }}
+          style={[
+            tw`absolute bottom-50 w-52 bg-white p-5 rounded-2xl `,
+            { margnHorizontal: "25%" },
+          ]}
+        >
+          <Text style={tw`font-semibold text-center text-xl`}>
+            Iniciar sesión
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={handleRegisterButtonClick} // Agrega una nueva función para el botón de registro
+          style={[
+            tw`absolute bottom-25 w-52 bg-white p-5 rounded-2xl`,
+            // { marginLeft: "25%" },
+          ]}
+        >
+          <Text style={tw`font-semibold text-center text-xl`}>Registrarse</Text>
+        </TouchableOpacity>
+      </ImageBackground>
+    </View>
+  );
+}

@@ -82,15 +82,15 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   boton: {
-    width: "30%",
+    width: "auto",
     backgroundColor: "#8f0000",
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
     marginVertical: 8,
     borderRadius: 5,
-    padding: 15,
-    marginHorizontal: 4,
+    padding: 20,
+    marginHorizontal: 8,
   },
   botonTexto: {
     color: "white",

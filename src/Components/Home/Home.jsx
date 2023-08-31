@@ -6,19 +6,29 @@ import {
   ScrollView,
   Image,
 } from "react-native";
-import React from "react";
+import React, { useContext, useEffect, useLayoutEffect } from "react";
 import Entypo from "react-native-vector-icons/Entypo";
 import { useNavigation } from "@react-navigation/native";
+import { Feather } from "@expo/vector-icons";
+import { AuthContext } from "../Context/AuthContext";
+import tw from "twrnc";
 
 export default function Home() {
+  const { userInfo, logout } = useContext(AuthContext);
   const navigation = useNavigation();
 
-  const handleAgregarPress = () => {
-    console.log("Funcionando con la funcion");
-  };
+  useEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, []);
+
   return (
     <ScrollView>
       <View style={styles.container}>
+        <Text style={tw`flex-1  font-semibold text-center text-2xl text-lime-700`}>
+          Bienvenido {userInfo} {"\n"}a
+        </Text>
         <Text style={styles.textoM}>MIS MANOS HABLA</Text>
         <Image
           //   source={require("../../../assets/favicon.png")}
@@ -39,6 +49,22 @@ export default function Home() {
           />
           <Text style={styles.botonText}>INICIO</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.log_out}
+          //  onPress={() => navigation.navigate("login")}
+          onPress={() => {
+            logout();
+          }}
+        >
+          <Feather
+            name="log-out"
+            size={24}
+            color="white"
+            style={{ marginRight: 5 }}
+          />
+          <Text style={styles.botonText}>Cerrar Sessión</Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -50,11 +76,21 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 20,
-    marginTop: 50,
+    marginTop: 100,
   },
   boton: {
     backgroundColor: "green",
     padding: 20,
+    borderRadius: 5,
+    width: "50%",
+    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    margin: 15,
+  },
+  log_out: {
+    backgroundColor: "#4a98f7",
+    padding: 10,
     borderRadius: 5,
     width: "50%",
     justifyContent: "center",
