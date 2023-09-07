@@ -9,25 +9,25 @@ export default function Modal({ route }) {
 
   const AllDays = {
     LUNES: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Semanas/Lunes.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Semana/Lunes.jpg?raw=true",
     },
     MARTES: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Semanas/Martes.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Semana/Martes.jpg?raw=true",
     },
     MIERCOLES: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Semanas/Miercoles.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Semana/Miercoles.jpg?raw=true",
     },
     JUEVES: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Semanas/Jueves.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Semana/Jueves.jpg?raw=true",
     },
     VIERNES: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Semanas/Viernes.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Semana/Viernes.jpg?raw=true",
     },
     SABADO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Semanas/S%C3%A0dado.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Semana/Sabado.jpg?raw=true",
     },
     DOMINGO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Semanas/Domingo.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Semana/Domingo.jpg?raw=true",
     },
   };
 

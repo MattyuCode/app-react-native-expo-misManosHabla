@@ -10,34 +10,34 @@ export default function ModalNumeros({ route }) {
 
   const AllNumeros = {
     UNO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Uno.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/Uno.jpg?raw=true",
     },
     DOS: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/dos.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/Dos.jpg?raw=true",
     },
     TRES: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Tres.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/Tres.jpg?raw=true",
     },
     CUATRO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Cuatro.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/Cuatro.jpg?raw=true",
     },
     CINCO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Cinco.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/cinco.jpg?raw=true",
     },
     SEIS: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Seis.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/Seis.jpg?raw=true",
     },
     SIETE: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Siete.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/Siete.jpg?raw=true",
     },
     OCHO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Ocho.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/Ocho.jpg?raw=true",
     },
     NUEVE: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Nueve.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/Nueve.jpg?raw=true",
     },
     DIEZ: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Numeros/Dies.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Numero/Dies.jpg?raw=true",
     },
   };
 

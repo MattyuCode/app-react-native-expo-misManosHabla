@@ -35,7 +35,7 @@ export default function Alfabetos() {
     { id: "18", title: "O" },
     { id: "19", title: "P" },
     { id: "20", title: "Q" },
-    { id: "21", title: "N" },
+    { id: "21", title: "R" },
     { id: "22", title: "RR" },
     { id: "23", title: "S" },
     { id: "24", title: "T" },

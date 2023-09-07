@@ -10,22 +10,22 @@ export default function ModalEmciones({ route }) {
 
   const AllEmociones = {
     AMOR: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Emociones/Amor.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Emociones/Amor.jpg?raw=true",
     },
     ENFADADO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Emociones/Enfadado.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Emociones/Enfadado.jpg?raw=true",
     },
     FELIZ: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Emociones/Feliz.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Emociones/Feliz.jpg?raw=true",
     },
     MIEDO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Emociones/Miedo.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Emociones/Miedo.jpg?raw=true",
     },
     PACIENTE: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Emociones/Paciente.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Emociones/Paciente.jpg?raw=true",
     },
     TRISTE: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Emociones/Triste.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Emociones/Triste.jpg?raw=true",
     },
   };
 

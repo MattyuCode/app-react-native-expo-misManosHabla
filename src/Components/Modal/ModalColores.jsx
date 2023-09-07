@@ -12,32 +12,32 @@ export default function ModalColores({ route }) {
   
   const AllColores = {
     AMARILLO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Amarillo.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Color/Amarillo.jpg?raw=true",
     },
     NARANJA: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Anaranjado.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Color/Anaranjado.jpg?raw=true",
     },
     AZUL: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Azul.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Color/Azul.jpg?raw=true",
     },
     CAFÉ: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Caf%C3%A8.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Color/Cafe.jpg?raw=true",
     },
     MORADO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Morado.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Color/Morado.jpg?raw=true",
     },
     NEGRO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Negro.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Color/Negro.jpg?raw=true",
     },
     ROJO: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Rojo.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Color/Rojo.jpg?raw=true",
     },
     ROSA: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Rosa.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Color/Rosa.jpg?raw=true",
     },
 
     VERDE: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Colores/Verede.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Color/Verde.jpg?raw=true",
     },
   };
 

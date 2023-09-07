@@ -8,96 +8,96 @@ export default function ModalAlfabeto({ route }) {
 
   const AllAlfabeto = {
     A: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/A.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/A.jpg?raw=true",
     },
     B: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/B.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/B.jpg?raw=true",
     },
     C: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/C.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/C.jpg?raw=true",
     },
     CH: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/CH.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/CH.jpg?raw=true",
     },
     D: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/D.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/D.jpg?raw=true",
     },
     E: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/E.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/E.jpg?raw=true",
     },
     F: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/F.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/F.jpg?raw=true",
     },
     G: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/G.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/G.jpg?raw=true",
     },
     H: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/H.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/H.jpg?raw=true",
     },
     I: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/I.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/I.jpg?raw=true",
     },
     J: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/J.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/J.jpg?raw=true",
     },
     K: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/K.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/K.jpg?raw=true",
     },
     L: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/L.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/L.jpg?raw=true",
     },
     LL: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/LL.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/LL.jpg?raw=true",
     },
 
     M: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/M.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/M.jpg?raw=true",
     },
     N: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/N.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/N.jpg?raw=true",
     },
     Ñ: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/%C3%91.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/%C3%91.JPG?raw=true",
     },
     O: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/O.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/O.jpg?raw=true",
     },
     P: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/P.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/P.jpg?raw=true",
     },
     Q: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/Q.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/Q.jpg?raw=true",
     },
     R: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/R.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/R.jpg?raw=true",
     },
 
     RR: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/RR.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/RR.jpg?raw=true",
     },
     S: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/S.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/S.jpg?raw=true",
     },
     T: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/T.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/T.jpg?raw=true",
     },
     U: {
-      uri: " https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/U.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/U.jpg?raw=true",
     },
     V: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/V.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/V.jpg?raw=true",
     },
     W: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/W.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/W.jpg?raw=true",
     },
     X: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/W.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/X.jpg?raw=true",
     },
     Y: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/Y.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/Y.jpg?raw=true",
     },
     Z: {
-      uri: "https://github.com/Victor587/image-app/blob/main/Image-Alfabeto/Z.jpg?raw=true",
+      uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Alfabeto/Z.jpg?raw=true",
     },
   };
 
