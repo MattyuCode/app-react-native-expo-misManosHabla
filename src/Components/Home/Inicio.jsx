@@ -14,7 +14,7 @@ export default function Inicio() {
   const navigation = useNavigation();
 
   const data = [
-    { id: "1", title: "ALFABETOS", name: "Alfabetos" },
+    { id: "1", title: "ALFABETO", name: "Alfabeto" },
     { id: "2", title: "NÚMEROS", name: "Numeros" },
     { id: "3", title: "COLORES", name: "Colores" },
     { id: "4", title: "EMOCIONES", name: "Emociones" },

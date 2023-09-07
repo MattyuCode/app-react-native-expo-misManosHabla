@@ -89,8 +89,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginVertical: 8,
     borderRadius: 5,
-    padding: 20,
-    marginHorizontal: 8,
+    padding: 15,
+    marginHorizontal: 4,
   },
   botonTexto: {
     color: "white",

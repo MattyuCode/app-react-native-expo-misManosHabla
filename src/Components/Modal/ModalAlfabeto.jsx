@@ -109,7 +109,7 @@ export default function ModalAlfabeto({ route }) {
       <Image source={alfabeto} style={styles.imagen} resizeMode="contain" />
       <TouchableOpacity
         style={styles.boton}
-        onPress={() => navigation.navigate("Alfabetos")}
+        onPress={() => navigation.navigate("Alfabeto")}
       >
         <Text style={styles.botonText}>Regresar</Text>
       </TouchableOpacity>

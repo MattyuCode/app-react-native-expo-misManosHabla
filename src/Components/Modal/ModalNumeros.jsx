@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   encabezado: {
-    fontWeight: 600,
+   // fontWeight: 600,
     fontSize: 40,
     color: "#05633E",
     marginTop: 10,

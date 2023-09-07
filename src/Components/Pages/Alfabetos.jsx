@@ -70,7 +70,7 @@ export default function Alfabetos() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.T3xto5}>LOS ALFABETOS</Text>
+      <Text style={styles.T3xto5}>El ALFABETO</Text>
       <TextInput
         style={styles.searchInput}
         placeholder="Buscar alfabetos..."
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     borderRadius: 5,
     padding: 15,
-    margin: 8,
+    margin: 4,
   },
   icono: {
     marginBottom: 8,
@@ -124,18 +124,18 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     borderRadius: 5,
     padding: 10,
-    marginBottom: 20,
+    marginBottom: 10,
   },
   T3xto5: {
     color: "#ffff",
     textAlign: "center",
-    marginBottom: 30,
+    marginBottom: 20,
     backgroundColor: "#145ddbc2",
     // marginTop: 50,
     fontSize: 30,
     fotWeight: 700,
     borderRadius: 15,
-    padding: 25,
+    padding: 8,
   },
   boton1: {
     backgroundColor: "red",
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     margin: 15,
-    marginTop: 30,
+    marginTop: 10,
   },
   botonText1: {
     color: "white",

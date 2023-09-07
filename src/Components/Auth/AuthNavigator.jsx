@@ -7,7 +7,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../Home/Home";
 import Inicio from "../Home/Inicio";
-import Alfabetos from "../Pages/Alfabetos";
+
 import DiasSemana from "../Pages/DiasSemana";
 import Numeros from "../Pages/Numeros";
 import Colores from "../Pages/Colores";
@@ -20,6 +20,7 @@ import ModalColores from "../Modal/ModalColores";
 import ModalEmciones from "../Modal/ModalEmciones";
 import Login from "./Login/Login";
 import { AuthContext } from "../Context/AuthContext";
+import Alfabetos from "../Pages/Alfabetos";
 
 const AuthNavigator = () => {
   const Stack = createStackNavigator();
@@ -45,7 +46,7 @@ const AuthNavigator = () => {
             <Stack.Screen name="home" component={Home} />
             <Stack.Screen name="INICIO" component={Inicio} />
             <Stack.Screen name="Numeros" component={Numeros} />
-            <Stack.Screen name="Alfabetos" component={Alfabetos} />
+            <Stack.Screen name="Alfabeto" component={Alfabetos} />
             <Stack.Screen name="DiasSemana" component={DiasSemana} />
             <Stack.Screen name="Colores" component={Colores} />
             <Stack.Screen name="Familia" component={Familia} />

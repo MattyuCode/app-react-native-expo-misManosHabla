@@ -35,7 +35,7 @@ export default function Login() {
       <ImageBackground
         resizeMode="cover"
         style={[tw`flex-1 items-center  `, { paddingTop: 100 }]}
-        source={require("../../../../assets/gradient1.png")}
+        source={require("../../../../assets/gradient.png")}
       >
         <View style={tw`  `}>
           <Image
@@ -44,7 +44,7 @@ export default function Login() {
               tw`w-70 h-70  border-4 border-indigo-500/100`,
               { borderRadius: 150 },
             ]}
-            source={require("../../../../assets/AI_Generated_Image.jpg")}
+            source={{uri:"https://github.com/Victor587/Image-apps/blob/master/Image-Logo/LogoAzul.jpg?raw=true"}}
           />
         </View>
 

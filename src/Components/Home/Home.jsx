@@ -29,7 +29,7 @@ export default function Home() {
         <Text style={tw`flex-1  font-semibold text-center text-2xl text-lime-700`}>
           Bienvenido {userInfo} {"\n"}a
         </Text>
-        <Text style={styles.textoM}>MIS MANOS HABLA</Text>
+        <Text style={styles.textoM}>MIS MANOS HABLAN</Text>
         <Image
           //   source={require("../../../assets/favicon.png")}
           source={{

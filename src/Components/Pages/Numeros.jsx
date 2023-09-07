@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     backgroundColor: "#4af740",
     fontSize: 30,
-    fontWeight: 700,
+   // fontWeight: 700,
     borderRadius: 15,
     padding: 25,
   },
