@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   FondoBlanco: {
+    paddingHorizontal:10,
     alignItems: "center",
     backgroundColor: "#e1e1e1",
     height: "100%",
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
   texto: {
     paddingTop: 80,
     textAlign: "center",
-    fontSize: "30px",
+    fontSize: 30,
     fontWeight: "bold",
     color: "#fff",
   },
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     backgroundColor: "#ffff",
     height: 350,
-    borderRadius: "10px",
+    borderRadius: 10,
     width: "90%",
     marginLeft: 20,
     marginTop: 200,
