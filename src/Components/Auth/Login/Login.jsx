@@ -24,8 +24,6 @@ export default function Login() {
     });
   }, []);
 
-
-
   const handleRegisterButtonClick = () => {
     navigation.navigate("signUp");
   };
@@ -44,7 +42,9 @@ export default function Login() {
               tw`w-70 h-70  border-4 border-indigo-500/100`,
               { borderRadius: 150 },
             ]}
-            source={{uri:"https://github.com/Victor587/Image-apps/blob/master/Image-Logo/LogoAzul.jpg?raw=true"}}
+            source={{
+              uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Logo/LogoAzul.jpg?raw=true",
+            }}
           />
         </View>
 
@@ -79,15 +79,12 @@ export default function Login() {
           </Text>
         </TouchableOpacity>
 
-        {/* <TouchableOpacity
+        <TouchableOpacity
           onPress={handleRegisterButtonClick} // Agrega una nueva función para el botón de registro
-          style={[
-            tw`bottom-15 w-52 bg-white p-5 rounded-2xl`,
-            { marginLeft: "25%" },
-          ]}
+          style={[tw`bottom-0 w-52 bg-white p-5 rounded-2xl mt-5`]}
         >
           <Text style={tw`font-semibold text-center text-xl`}>Registrarse</Text>
-        </TouchableOpacity> */}
+        </TouchableOpacity>
       </ImageBackground>
     </View>
   );
