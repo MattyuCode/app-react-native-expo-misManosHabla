@@ -80,12 +80,14 @@ export default function Login() {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={handleRegisterButtonClick} // Agrega una nueva función para el botón de registro
+          //FIXME: LLAMAMOS A ESTA FUNCION PARA IR LA PARTE DE REGISTRO CON NAVIGATION
+          onPress={handleRegisterButtonClick}
           style={[tw`bottom-0 w-52 bg-white p-5 rounded-2xl mt-5`]}
         >
           <Text style={tw`font-semibold text-center text-xl`}>Registrarse</Text>
         </TouchableOpacity>
       </ImageBackground>
+      <StatusBar style={"light"} />
     </View>
   );
 }

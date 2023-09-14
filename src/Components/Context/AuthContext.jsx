@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createContext, useEffect, useState } from "react";
 import { API_Services } from "../../Config/environment";
- 
+import Toast from 'react-native-toast-message'; 
 
 export const AuthContext = createContext();
 
@@ -30,7 +30,12 @@ export const AuthProvider = ({ children }) => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        console.error("Error:", errorData.message);
+        // console.error("Error:", errorData.message);
+        Toast.show({
+          type: 'success',
+          text1: 'Hello',
+          text2: 'This is some something 👋'
+        });
         alert(errorData.message);
       } else {
         const data = await response.json();

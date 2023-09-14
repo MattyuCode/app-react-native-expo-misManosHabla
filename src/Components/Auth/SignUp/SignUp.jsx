@@ -1,17 +1,61 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import React, { useEffect } from "react";
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import tw from "twrnc";
+import { API_Services } from "../../../Config/environment";
+import { StatusBar } from "expo-status-bar";
+import { AuthContext } from "../../Context/AuthContext";
 
 export default function SignUp() {
+  const { login } = useContext(AuthContext);
   const navigation = useNavigation();
+  const [userName, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   useEffect(() => {
     navigation.setOptions({
       headerShown: false,
     });
   }, []);
+
+  const registrar = async () => {
+    try {
+      const response = await fetch(
+        `https://api-chuj-all-dev.fl0.io/api/users`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            user: userName,
+            email: "dasdf12@gmial.com",
+            password: password,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Error:", errorData.message);
+        alert(errorData.message);
+      } else {
+        const data = await response.json();
+        //TODO: MANDAMOS A LLAMAR EL USECONTEXT DE LOGIN PARA ENTRAR DIRECTAMENTE EL HOME DE LA APP
+        login(data.user.user, data.user.password);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <SafeAreaView style={styles.principal}>
@@ -24,23 +68,38 @@ export default function SignUp() {
             { fontSize: 17 },
           ]}
           placeholder="Nombre de usuario"
-          value="usuario"
-          // onChangeText={(value) => setUsername(value)}
+          value={userName}
+          onChangeText={(value) => setUsername(value)}
         />
 
         <TextInput
           style={[
-            tw`w-80 bg-blue p-5 border-2 border-sky-500 rounded-md mb-5`,
+            tw`w-80 bg-white p-5 border-2 border-sky-500 rounded-md mb-5`,
             { fontSize: 17 },
           ]}
           placeholder="Contraseña"
           // keyboardType="phone-pad"
-          secureTextEntry={true}
-          value="password"
-          // onChangeText={(value) => setPassword(value)}
+          // secureTextEntry={true}
+          value={password}
+          onChangeText={(value) => setPassword(value)}
         />
+
+        <TouchableOpacity
+          onPress={() => {
+            registrar();
+          }}
+          style={[
+            tw`bottom-0 w-52 bg-white p-5 rounded-2xl mt-3 `,
+            styles.bottom,
+          ]}
+        >
+          <Text style={tw`font-semibold text-center text-white text-xl`}>
+            Registrar
+          </Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.FondoBlanco}></View>
+      <StatusBar style={"light"} />
     </SafeAreaView>
   );
 }
@@ -51,7 +110,7 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   FondoBlanco: {
-    paddingHorizontal:10,
+    paddingHorizontal: 10,
     alignItems: "center",
     backgroundColor: "#e1e1e1",
     height: "100%",
@@ -77,5 +136,9 @@ const styles = StyleSheet.create({
     width: "90%",
     marginLeft: 20,
     marginTop: 200,
+  },
+  bottom: {
+    margnHorizontal: "25%",
+    backgroundColor: "#2980B9",
   },
 });
