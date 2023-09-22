@@ -28,6 +28,10 @@ export default function Login() {
     navigation.navigate("signUp");
   };
 
+  const handleForgotPasswordClick = () => {
+    navigation.navigate("recuperar");
+  };
+
   return (
     <View style={tw`flex-1 bg-slate-700`}>
       <ImageBackground
@@ -85,6 +89,15 @@ export default function Login() {
           style={[tw`bottom-0 w-52 bg-white p-5 rounded-2xl mt-5`]}
         >
           <Text style={tw`font-semibold text-center text-xl`}>Registrarse</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={handleForgotPasswordClick}
+          style={[tw`bottom-0 p-1 rounded-2xl mt-5`]}
+        >
+          <Text style={tw`font-semibold text-center text-blue-700 text-xl`}>
+            Olvidaste tu Contraseña?
+          </Text>
         </TouchableOpacity>
       </ImageBackground>
       <StatusBar style={"light"} />

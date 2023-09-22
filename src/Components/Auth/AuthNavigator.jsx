@@ -22,6 +22,7 @@ import Login from "./Login/Login";
 import { AuthContext } from "../Context/AuthContext";
 import Alfabetos from "../Pages/Alfabetos";
 import SignUp from "./SignUp/SignUp";
+import ForgotPassword from "./ForgotPassword/ForgotPassword";
 
 const AuthNavigator = () => {
   const Stack = createStackNavigator();
@@ -65,6 +66,7 @@ const AuthNavigator = () => {
             {/* FIXME: VALIDAR INICIO DE SESSION Y REGISTRO */}
             <Stack.Screen name="login" component={Login} />
             <Stack.Screen name="signUp" component={SignUp} />  
+            <Stack.Screen name="recuperar" component={ForgotPassword} />
           </>
         )}
       </Stack.Navigator>
