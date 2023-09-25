@@ -12,6 +12,7 @@ import { useNavigation } from "@react-navigation/native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import tw from "twrnc";
 import { API_Services } from "../../../Config/environment";
+import { StatusBar } from "expo-status-bar";
 
 export default function ForgotPassword() {
   const navigation = useNavigation();
@@ -38,9 +39,9 @@ export default function ForgotPassword() {
         const errorMessage = data.error;
         setError(errorMessage);
         // if (response.status === 404) {
-        //   setError("Usuario no encontrado"); 
+        //   setError("Usuario no encontrado");
         // } else {
-        //   setError("Error en la solicitud"); 
+        //   setError("Error en la solicitud");
         // }
       } else {
         setIsLoading(true);
@@ -106,6 +107,7 @@ export default function ForgotPassword() {
         <FontAwesome5 name="whatsapp" size={24} color="white" />
         <Text style={styles.buttonText}>Contactar al Administrador</Text>
       </TouchableOpacity>
+      <StatusBar style={"dark"} />
     </View>
   );
 }

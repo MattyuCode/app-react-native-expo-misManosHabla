@@ -35,85 +35,86 @@ export default function Login() {
   };
 
   return (
-    <SafeAreaView style={styles.principal}>
-      {/* <ImageBackground
+    <>
+      <SafeAreaView style={styles.principal}>
+        {/* <ImageBackground
         resizeMode="cover"
         style={[tw`flex-1 items-center  `, { paddingTop: 100 }]}
         source={require("../../../../assets/gradient.png")}
       > */}
 
-      <View style={styles.card}>
-        <View style={tw`  `}>
-          <Image
+        <View style={styles.card}>
+          <View style={tw`  `}>
+            <Image
+              style={[
+                // tw`w-70 h-70  border-4 border-green-500`,
+                tw`w-50 h-50  border-4 `,
+                { borderRadius: 150, borderColor: "#009baa" },
+              ]}
+              source={{
+                uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Logo/LogoAzul.jpg?raw=true",
+              }}
+            />
+          </View>
+
+          <TextInput
             style={[
-              // tw`w-70 h-70  border-4 border-green-500`,
-              tw`w-50 h-50  border-4 border-sky-500`,
-              { borderRadius: 150 },
+              tw`w-80 bg-white p-4 border-2 border-sky-500 rounded-md mb-5 mt-5`,
+              { fontSize: 17 },
             ]}
-            source={{
-              uri: "https://github.com/Victor587/Image-apps/blob/master/Image-Logo/LogoAzul.jpg?raw=true",
-            }}
+            placeholder="Nombre de usuario"
+            value={username}
+            onChangeText={(value) => setUsername(value)}
           />
+
+          <TextInput
+            style={[
+              tw`w-80 bg-white p-4 border-2 border-sky-500 rounded-md mb-5 mt-5`,
+              { fontSize: 17 },
+            ]}
+            placeholder="Contraseña"
+            // keyboardType="phone-pad"
+            secureTextEntry={true}
+            value={password}
+            onChangeText={(value) => setPassword(value)}
+          />
+
+          <TouchableOpacity
+            // onPress={handleButtonClick}
+            onPress={() => {
+              login(username, password);
+            }}
+            style={[tw`bottom-0 w-52  p-3 rounded-2xl `, styles.botones]}
+          >
+            <Text style={tw`font-semibold text-white text-center text-xl`}>
+              Iniciar sesión
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            //FIXME: LLAMAMOS A ESTA FUNCION PARA IR LA PARTE DE REGISTRO CON NAVIGATION
+            onPress={handleRegisterButtonClick}
+            style={[tw`bottom-0 w-52 p-3 rounded-2xl mt-5`, styles.botones]}
+          >
+            <Text style={tw`font-semibold text-white text-center text-xl`}>
+              Registrarse
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={handleForgotPasswordClick}
+            style={[tw`bottom-0 p-1 rounded-2xl mt-5`]}
+          >
+            <Text style={tw`font-semibold text-center text-cyan-700 text-xl`}>
+              ¿Olvidaste tu contraseña?
+            </Text>
+          </TouchableOpacity>
+          {/* </ImageBackground> */}
         </View>
-
-        <TextInput
-          style={[
-            tw`w-80 bg-white p-4 border-2 border-sky-500 rounded-md mb-5 mt-5`,
-            { fontSize: 17 },
-          ]}
-          placeholder="Nombre de usuario"
-          value={username}
-          onChangeText={(value) => setUsername(value)}
-        />
-
-        <TextInput
-          style={[
-            tw`w-80 bg-white p-4 border-2 border-sky-500 rounded-md mb-5 mt-5`,
-            { fontSize: 17 },
-          ]}
-          placeholder="Contraseña"
-          // keyboardType="phone-pad"
-          secureTextEntry={true}
-          value={password}
-          onChangeText={(value) => setPassword(value)}
-        />
-
-        <TouchableOpacity
-          // onPress={handleButtonClick}
-          onPress={() => {
-            login(username, password);
-          }}
-          style={[tw`bottom-0 w-52  p-3 rounded-2xl `, styles.botones]}
-        >
-          <Text style={tw`font-semibold text-white text-center text-xl`}>
-            Iniciar sesión
-          </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          //FIXME: LLAMAMOS A ESTA FUNCION PARA IR LA PARTE DE REGISTRO CON NAVIGATION
-          onPress={handleRegisterButtonClick}
-          style={[tw`bottom-0 w-52 p-3 rounded-2xl mt-5`, styles.botones]}
-        >
-          <Text style={tw`font-semibold text-white text-center text-xl`}>
-            Registrarse
-          </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          onPress={handleForgotPasswordClick}
-          style={[tw`bottom-0 p-1 rounded-2xl mt-5`]}
-        >
-          <Text style={tw`font-semibold text-center text-cyan-700 text-xl`}>
-            ¿Olvidaste tu contraseña?
-          </Text>
-        </TouchableOpacity>
-        {/* </ImageBackground> */}
-      </View>
-      <View style={styles.FondoBlanco}></View>
-
+        <View style={styles.FondoBlanco}></View>
+      </SafeAreaView>
       <StatusBar style={"light"} />
-    </SafeAreaView>
+    </>
   );
 }
 
