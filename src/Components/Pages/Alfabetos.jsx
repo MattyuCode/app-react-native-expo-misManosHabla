@@ -58,7 +58,7 @@ export default function Alfabetos() {
       <TouchableOpacity
         style={styles.boton}
         onPress={() =>
-          navigation.navigate("VistaAlfabetos", {
+          navigation.navigate("VistaAbecedario", {
             alfabetoSeleccionado: item.title,
           })
         }
@@ -70,10 +70,10 @@ export default function Alfabetos() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.T3xto5}>El ALFABETO</Text>
+      <Text style={styles.T3xto5}>El ABECEDARIO</Text>
       <TextInput
         style={styles.searchInput}
-        placeholder="Buscar alfabetos..."
+        placeholder="Buscar abecederios..."
         value={searchText}
         onChangeText={(text) => setSearchText(text)}
       />

@@ -18,6 +18,7 @@ export default function SignUp() {
   const navigation = useNavigation();
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     navigation.setOptions({
@@ -27,28 +28,26 @@ export default function SignUp() {
 
   const registrar = async () => {
     try {
-      const response = await fetch(
-        `https://api-chuj-all-dev.fl0.io/api/users`,
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            user: userName,
-            email: "dasdf12@gmial.com",
-            password: password,
-          }),
-        }
-      );
+      const response = await fetch(`${API_Services}/users`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user: userName,
+          email: "testApp@gmial.com",
+          password: password,
+        }),
+      });
 
       if (!response.ok) {
         const errorData = await response.json();
-        console.error("Error:", errorData.message);
+        //  console.error("Error:", errorData.message);
         alert(errorData.message);
       } else {
         const data = await response.json();
+        setIsLoading(true);
         //TODO: MANDAMOS A LLAMAR EL USECONTEXT DE LOGIN PARA ENTRAR DIRECTAMENTE EL HOME DE LA APP
         login(data.user.user, data.user.password);
       }
@@ -62,6 +61,10 @@ export default function SignUp() {
       <Text style={styles.texto}>Registrate</Text>
 
       <View style={styles.card}>
+        {isLoading ? (
+          <Text style={tw`text-green-600 text-lg`}>Usuario Registrado</Text>
+        ) : null}
+
         <TextInput
           style={[
             tw`w-80 bg-white p-5 border-2 border-sky-500 rounded-md mb-5 mt-5`,

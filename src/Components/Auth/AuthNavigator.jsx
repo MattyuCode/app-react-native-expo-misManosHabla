@@ -48,7 +48,7 @@ const AuthNavigator = () => {
             <Stack.Screen name="home" component={Home} />
             <Stack.Screen name="INICIO" component={Inicio} />
             <Stack.Screen name="Numeros" component={Numeros} />
-            <Stack.Screen name="Alfabeto" component={Alfabetos} />
+            <Stack.Screen name="Abecedario" component={Alfabetos} />
             <Stack.Screen name="DiasSemana" component={DiasSemana} />
             <Stack.Screen name="Colores" component={Colores} />
             <Stack.Screen name="Familia" component={Familia} />
@@ -56,7 +56,7 @@ const AuthNavigator = () => {
 
             {/* NOTE: TODOS LOS MODALES */}
             <Stack.Screen name="Vista" component={Modal} />
-            <Stack.Screen name="VistaAlfabetos" component={ModalAlfabeto} />
+            <Stack.Screen name="VistaAbecedario" component={ModalAlfabeto} />
             <Stack.Screen name="VistaNumeros" component={ModalNumeros} />
             <Stack.Screen name="VistaColores" component={ModalColores} />
             <Stack.Screen name="VistaEmocion" component={ModalEmciones} />

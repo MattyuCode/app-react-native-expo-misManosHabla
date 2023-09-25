@@ -2,9 +2,11 @@ import {
   Text,
   View,
   Image,
+  StyleSheet,
   ImageBackground,
   TouchableOpacity,
   TextInput,
+  SafeAreaView,
 } from "react-native";
 import React, { useContext, useEffect, useLayoutEffect, useState } from "react";
 import tw from "twrnc";
@@ -33,17 +35,19 @@ export default function Login() {
   };
 
   return (
-    <View style={tw`flex-1 bg-slate-700`}>
-      <ImageBackground
+    <SafeAreaView style={styles.principal}>
+      {/* <ImageBackground
         resizeMode="cover"
         style={[tw`flex-1 items-center  `, { paddingTop: 100 }]}
         source={require("../../../../assets/gradient.png")}
-      >
+      > */}
+
+      <View style={styles.card}>
         <View style={tw`  `}>
           <Image
             style={[
               // tw`w-70 h-70  border-4 border-green-500`,
-              tw`w-70 h-70  border-4 border-indigo-500/100`,
+              tw`w-60 h-60  border-4 border-sky-500`,
               { borderRadius: 150 },
             ]}
             source={{
@@ -53,14 +57,20 @@ export default function Login() {
         </View>
 
         <TextInput
-          style={[tw`w-80 bg-white p-5 rounded-xl mb-5 mt-5`, { fontSize: 17 }]}
+          style={[
+            tw`w-80 bg-white p-4 border-2 border-sky-500 rounded-md mb-5 mt-5`,
+            { fontSize: 17 },
+          ]}
           placeholder="Nombre de usuario"
           value={username}
           onChangeText={(value) => setUsername(value)}
         />
 
         <TextInput
-          style={[tw`w-80 bg-white p-5 rounded-xl mb-5`, { fontSize: 17 }]}
+          style={[
+            tw`w-80 bg-white p-4 border-2 border-sky-500 rounded-md mb-5 mt-5`,
+            { fontSize: 17 },
+          ]}
           placeholder="Contraseña"
           // keyboardType="phone-pad"
           secureTextEntry={true}
@@ -73,12 +83,9 @@ export default function Login() {
           onPress={() => {
             login(username, password);
           }}
-          style={[
-            tw`bottom-0 w-52 bg-white p-5 rounded-2xl `,
-            { margnHorizontal: "25%" },
-          ]}
+          style={[tw`bottom-0 w-52  p-3 rounded-2xl `, styles.botones]}
         >
-          <Text style={tw`font-semibold text-center text-xl`}>
+          <Text style={tw`font-semibold text-white text-center text-xl`}>
             Iniciar sesión
           </Text>
         </TouchableOpacity>
@@ -86,21 +93,62 @@ export default function Login() {
         <TouchableOpacity
           //FIXME: LLAMAMOS A ESTA FUNCION PARA IR LA PARTE DE REGISTRO CON NAVIGATION
           onPress={handleRegisterButtonClick}
-          style={[tw`bottom-0 w-52 bg-white p-5 rounded-2xl mt-5`]}
+          style={[tw`bottom-0 w-52 p-3 rounded-2xl mt-5`, styles.botones]}
         >
-          <Text style={tw`font-semibold text-center text-xl`}>Registrarse</Text>
+          <Text style={tw`font-semibold text-white text-center text-xl`}>
+            Registrarse
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           onPress={handleForgotPasswordClick}
           style={[tw`bottom-0 p-1 rounded-2xl mt-5`]}
         >
-          <Text style={tw`font-semibold text-center text-blue-700 text-xl`}>
-            Olvidaste tu Contraseña?
+          <Text style={tw`font-semibold text-center text-cyan-700 text-xl`}>
+            ¿Olvidaste tu contraseña?
           </Text>
         </TouchableOpacity>
-      </ImageBackground>
+        {/* </ImageBackground> */}
+      </View>
+      <View style={styles.FondoBlanco}></View>
+
       <StatusBar style={"light"} />
-    </View>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  principal: {
+    backgroundColor: "#009baa",
+    height: "100%",
+  },
+  FondoBlanco: {
+    paddingHorizontal: 10,
+    alignItems: "center",
+    backgroundColor: "#ffff",
+    // backgroundColor: "#e1e1e1",
+    borderTopEndRadius: 35,
+    borderTopStartRadius: 35,
+    height: "100%",
+    zIndex: 0,
+    marginTop: 250,
+  },
+
+  card: {
+    zIndex: 1,
+    flex: 1,
+    position: "absolute",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    // backgroundColor: "#e1e1e1",
+    // height: 350,
+    width: "100%",
+    // marginLeft: 20,
+    marginTop: 100,
+  },
+  botones: {
+    margnHorizontal: "25%",
+    backgroundColor: "#2980B9",
+  },
+});
