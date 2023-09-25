@@ -47,7 +47,7 @@ export default function Login() {
           <Image
             style={[
               // tw`w-70 h-70  border-4 border-green-500`,
-              tw`w-60 h-60  border-4 border-sky-500`,
+              tw`w-50 h-50  border-4 border-sky-500`,
               { borderRadius: 150 },
             ]}
             source={{
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     borderTopStartRadius: 35,
     height: "100%",
     zIndex: 0,
-    marginTop: 250,
+    marginTop: 180,
   },
 
   card: {

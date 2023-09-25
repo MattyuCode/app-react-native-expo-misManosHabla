@@ -73,7 +73,7 @@ export default function Alfabetos() {
       <Text style={styles.T3xto5}>El ABECEDARIO</Text>
       <TextInput
         style={styles.searchInput}
-        placeholder="Buscar abecederios..."
+        placeholder="Buscar abecederio..."
         value={searchText}
         onChangeText={(text) => setSearchText(text)}
       />
