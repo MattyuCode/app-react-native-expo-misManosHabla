@@ -28,6 +28,9 @@ export default function SignUp() {
 
   const registrar = async () => {
     try {
+      const _UserName = userName.trim();
+      const _Password = password.trim();
+
       const response = await fetch(`${API_Services}/users`, {
         method: "POST",
         headers: {
@@ -35,9 +38,9 @@ export default function SignUp() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          user: userName,
+          user: _UserName,
           email: "testApp@gmial.com",
-          password: password,
+          password: _Password,
         }),
       });
 
