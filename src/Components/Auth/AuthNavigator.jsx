@@ -11,7 +11,6 @@ import Inicio from "../Home/Inicio";
 import DiasSemana from "../Pages/DiasSemana";
 import Numeros from "../Pages/Numeros";
 import Colores from "../Pages/Colores";
-import Familia from "../Pages/Familia";
 import Emociones from "../Pages/Emociones";
 import Modal from "../Modal/Modal";
 import ModalAlfabeto from "../Modal/ModalAlfabeto";
@@ -51,7 +50,6 @@ const AuthNavigator = () => {
             <Stack.Screen name="Abecedario" component={Alfabetos} />
             <Stack.Screen name="DiasSemana" component={DiasSemana} />
             <Stack.Screen name="Colores" component={Colores} />
-            <Stack.Screen name="Familia" component={Familia} />
             <Stack.Screen name="Emociones" component={Emociones} />
 
             {/* NOTE: TODOS LOS MODALES */}

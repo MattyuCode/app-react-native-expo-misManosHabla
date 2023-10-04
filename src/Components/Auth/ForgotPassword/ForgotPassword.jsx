@@ -49,7 +49,7 @@ export default function ForgotPassword() {
         setPassEncontrado(data.datosUser.password);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -100,7 +100,7 @@ export default function ForgotPassword() {
         style={styles.button}
         onPress={() =>
           Linking.openURL(
-            "https://api.whatsapp.com/send?phone=50258874794&text=Buen día. Necesito ayuda para recuperar mi contraseña."
+            "https://api.whatsapp.com/send?phone=50259545358&text=Buen día. Necesito ayuda para recuperar mi contraseña."
           )
         }
       >

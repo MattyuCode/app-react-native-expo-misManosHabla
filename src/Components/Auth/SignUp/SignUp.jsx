@@ -55,7 +55,7 @@ export default function SignUp() {
         login(data.user.user, data.user.password);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
         AsyncStorage.setItem("isToken", datos.token);
       }
     } catch (error) {
-      console.error("Fetch Error:", error);
+      // console.error("Fetch Error:", error);
     }
 
     /*    setIsToken("Mattyus");
@@ -82,7 +82,7 @@ export const AuthProvider = ({ children }) => {
 
         setIsLoading(false);
       } catch (error) {
-        console.log("------->", error.message);
+        // console.log("------->", error.message);
       }
     };
 
