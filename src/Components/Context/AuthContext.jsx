@@ -62,6 +62,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setIsLoading(true);
     setIsToken(null);
+    
     AsyncStorage.removeItem("userInfo");
     AsyncStorage.removeItem("isToken");
     setIsLoading(false);

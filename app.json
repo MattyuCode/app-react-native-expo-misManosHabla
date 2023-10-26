@@ -2,7 +2,7 @@
   "expo": {
     "name": "MisManosHabla",
     "slug": "MisManosHabla",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mattyu.MisManosHabla"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "50675819-0f54-49d9-af4d-57d6a9c3c11f"
+      }
     }
   }
 }
